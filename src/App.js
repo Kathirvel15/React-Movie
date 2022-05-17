@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "./moviee/moviecard";
-import SearchIcon from "./moviee/moo.png";
+import Picture from "./moviee/moo.png";
 import "./App.css";
 
 
@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     searchMovies("Batman");
   }, []);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [movmov, setmovmov] = useState("");
   const [movies, setMovies] = useState([]);
   return (
     <div className="movie-header">
@@ -25,14 +25,14 @@ const App = () => {
 
       <div className="header-input">
         <input
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          value={movmov}
+          onChange={(e) => setmovmov(e.target.value)}
           placeholder="Search for movies"
         />
         <img
-          src={SearchIcon}
+          src={Picture}
           alt="search"
-          onClick={() => searchMovies(searchTerm)}
+          onClick={() => searchMovies(movmov)}
         />
       </div>
 
@@ -44,7 +44,7 @@ const App = () => {
         </div>
       ) : (
         <div className="no-field">
-          <h2>No movies found</h2>
+          <h2>No movies found<br></br>Type the Spelling Crt</h2>
         </div>
       )}
     </div>
